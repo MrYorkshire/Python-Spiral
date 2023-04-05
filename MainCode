@@ -1,0 +1,22 @@
+import turtle
+
+# Set up the turtle window
+window = turtle.Screen()
+window.bgcolor("black")
+
+# Set up the turtle
+t = turtle.Turtle()
+t.speed(0)
+t.width(2)
+
+# Define a list of colors
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+# Draw a spiral using the colors from the list
+for i in range(360):
+    t.color(colors[i % len(colors)])
+    t.forward(i)
+    t.left(59)
+
+# Keep the turtle window open until it's clicked
+window.exitonclick()
